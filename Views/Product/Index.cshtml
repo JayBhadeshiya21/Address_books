@@ -1,0 +1,51 @@
+﻿@model Address_books.Models.CountryClass
+@Html.ActionLink("hello","sda","as");
+
+<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Country Elements</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Country</a></li>
+                <li class="breadcrumb-item">From</li>
+            </ol>
+        </nav>
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="container my-5">
+            <h1 class="text-center mb-4">Country Form</h1>
+            <form>
+
+                <!-- CountryName -->
+                <div class="mb-3">
+                    <label class="form-label">CountryName</label>
+                    <input type="text" class="form-control" id="countryName" placeholder="Enter country name" asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+
+                <!-- CountryCode -->
+                <div class="mb-3">
+                    <label for="countryCode" class="form-label">CountryCode</label>
+                    <input type="text" class="form-control" id="countryCode" placeholder="Enter country code" asp-for="CountryCode">
+                    <span asp-validation-for="CountryCode" class="text-danger"></span>
+                </div>
+
+                <!-- UserID -->
+                <div class="mb-3">
+                    <label for="userID" class="form-label">UserID</label>
+                    <input type="number" class="form-control" id="userID" placeholder="Enter user ID">
+                </div>
+
+                <!-- Submit Button -->
+                @* <button type="submit" class="btn btn-primary"><a herf="@Url.Action("Product","Index")">Register yourself</a></button> *@
+                <p>this link is gren in the view </p>
+                @Html.ActionLink("Index_1","Product")
+
+            </form>
+        </div>
+    </section>
+
+
+</main><!-- End #main -->

@@ -1,0 +1,38 @@
+﻿@model DataTable
+@using System.Data
+
+<main id="main" class="main">
+
+    <div class="container mt-5">
+        <h2 class="text-center">State Information</h2>
+        <table class="table table-bordered">
+            <thead class="thead-dark">
+                <tr>
+                    <th>State Name</th>
+                    <th>State Code</th>
+                    <th>CountryName</th>
+                    <th>CreationDate</th>
+                    <th>UserName</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DataRow dataRow in Model.Rows)
+                {
+                    <tr>
+                        <td>@dataRow["StateName"]</td>
+                        <td>@dataRow["StateCode"]</td>
+                        <td>@dataRow["CountryName"]</td>
+                        <td>@dataRow["CreationDate"]</td>
+                        <td>@dataRow["UserName"]</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <a asp-controller="City" asp-action="CityList">CityList</a>
+
+    <a asp-controller="Country" asp-action="List_Country">CountryList</a>
+
+    <a asp-controller="State" asp-action="List_State">StateList</a>
+</main>

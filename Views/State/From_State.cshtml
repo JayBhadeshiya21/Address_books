@@ -1,0 +1,109 @@
+﻿<main id="main" class="main">
+
+    <div class="pagetitle">
+        <h1>Country Elements</h1>
+        <nav>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">State</a></li>
+                <li class="breadcrumb-item">From</li>
+            </ol>
+        </nav>  
+    </div><!-- End Page Title -->
+
+    <section class="section">
+        <div class="container my-5">
+            <h1 class="text-center mb-4">State Form</h1>
+            <form>
+                <!-- Form rows for 10 entries -->
+                <div class="row">
+                    <!-- Repeatable Row -->
+                    <div class="col-12 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- StateID (Read-Only, Auto-Increment Example) -->
+                                <div class="mb-3">
+                                    <label for="stateID1" class="form-label">StateID</label>
+                                    <input type="number" class="form-control" id="stateID1" placeholder="Auto-generated" readonly>
+                                </div>
+
+                                <!-- CountryID -->
+                                <div class="mb-3">
+                                    <label for="countryID1" class="form-label">CountryID</label>
+                                    <input type="number" class="form-control" id="countryID1" placeholder="Enter Country ID" required>
+                                </div>
+
+                                <!-- StateName -->
+                                <div class="mb-3">
+                                    <label for="stateName1" class="form-label">StateName</label>
+                                    <input type="text" class="form-control" id="stateName1" placeholder="Enter State Name" required>
+                                </div>
+
+                                <!-- StateCode -->
+                                <div class="mb-3">
+                                    <label for="stateCode1" class="form-label">StateCode</label>
+                                    <input type="text" class="form-control" id="stateCode1" placeholder="Enter State Code" required>
+                                </div>
+
+                                <!-- CreationDate -->
+                                <div class="mb-3">
+                                    <label for="creationDate1" class="form-label">CreationDate</label>
+                                    <input type="datetime-local" class="form-control" id="creationDate1" value="">
+                                </div>
+
+                                <!-- UserID -->
+                                <div class="mb-3">
+                                    <label for="userID1" class="form-label">UserID</label>
+                                    <input type="number" class="form-control" id="userID1" placeholder="Enter User ID" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Duplicate the above block for rows 2 through 10 -->
+                    <!-- State Form Row 2 -->
+                    <div class="col-12 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <!-- Replace '1' in the IDs with '2' -->
+                                <div class="mb-3">
+                                    <label for="stateID2" class="form-label">StateID</label>
+                                    <input type="number" class="form-control" id="stateID2" placeholder="Auto-generated" readonly>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="countryID2" class="form-label">CountryID</label>
+                                    <input type="number" class="form-control" id="countryID2" placeholder="Enter Country ID" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="stateName2" class="form-label">StateName</label>
+                                    <input type="text" class="form-control" id="stateName2" placeholder="Enter State Name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="stateCode2" class="form-label">StateCode</label>
+                                    <input type="text" class="form-control" id="stateCode2" placeholder="Enter State Code" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="creationDate2" class="form-label">CreationDate</label>
+                                    <input type="datetime-local" class="form-control" id="creationDate2" value="">
+                                </div>
+                                <div class="mb-3">
+                                    <label for="userID2" class="form-label">UserID</label>
+                                    <input type="number" class="form-control" id="userID2" placeholder="Enter User ID" required>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Repeat similarly for rows 3 to 10 -->
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn btn-primary">Submit All</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+
+
+</main><!-- End #main -->
