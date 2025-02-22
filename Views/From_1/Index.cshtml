@@ -1,0 +1,100 @@
+﻿  <main id="main" class="main">
+
+    <div class="container mt-5">
+        <h1 class="mb-4">Sample Form</h1>
+        <form asp-action="submit">
+            <!-- Text Input Fields -->
+            <div class="mb-3">
+                <label for="name"  class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone</label>
+                <input type="tel" class="form-control" id="phone" placeholder="Enter your phone number" name="phone" >
+            </div>
+            <div class="mb-3">
+                <label for="address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="address" placeholder="Enter your address" name="address" >
+            </div>
+
+            <!-- Checkbox -->
+            <div class="mb-3">
+                <label class="form-label">Hobbies</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="reading" id="hobbyReading" name="hobbie">
+                    <label class="form-check-label" for="hobbyReading"> Reading</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="traveling" id="hobbyTraveling" name="hobbie">
+                    <label class="form-check-label" for="hobbyTraveling"> Traveling</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="gaming" id="hobbyGaming" name="hobbie">
+                    <label class="form-check-label" for="hobbyGaming"> Gaming</label>
+                </div>
+            </div>
+
+            <!-- Radio Buttons -->
+            <div class="mb-3">
+                <label class="form-label">Gender</label><br>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="male" value="male">
+                    <label class="form-check-label" for="male"> Male</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="female" value="female">
+                    <label class="form-check-label" for="female"> Female</label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gender" id="other" value="other">
+                    <label class="form-check-label" for="other"> Other</label>
+                </div>
+            </div>
+
+            <!-- Dropdown -->
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <select class="form-select"  name="country">
+                    <option selected>Select your country</option>
+                    <option value="us">United States</option>
+                    <option value="uk">United Kingdom</option>
+                    <option value="in">India</option>
+                    <option value="ca">Canada</option>
+                </select>
+            </div>
+
+            <!-- Submit Button -->
+            <input type="submit" class="btn btn-primary" value="submit"/>
+        </form>
+    </div>
+    <br />
+  
+  <h4>From collected data</h4>
+  <div class="col-mb-3">
+      <table class="table">
+          <tr>
+              <th>name</th>
+              <th>email</th>
+              <th>phone</th>
+              <th>address</th>
+                <th>hobbie</th>
+              <th>gender</th>
+              <th>country</th>
+          </tr>
+            <tr>
+                <td>@ViewBag.name</td>
+                <td>@ViewBag.email</td>
+                <td>@ViewBag.phone</td>
+                <td>@ViewBag.address</td>
+                <td>@ViewBag.hobbie</td>
+                <td>@ViewBag.gender</td>
+                <td>@ViewBag.country</td>
+            </tr>
+      </table>
+
+  </div>
+  </main><!-- End #main -->

@@ -11,6 +11,7 @@
             <th>STDCode</th>
             <th>StateName</th>
             <th>UserName</th>
+            <td>Action</td>
         </tr>
     </thead>
     <tbody>
@@ -22,6 +23,12 @@
                 <td>@dataRow["STDCode"]</td>
                 <td>@dataRow["StateName"]</td>
                 <td>@dataRow["UserName"]</td>
+                    <td>
+                        <a href="/City/CityDelete?CityID=@dataRow["CityID"]" class="btn btn-outline-danger btn-xs">
+                            <i class="bi bi-x"></i>
+                        </a>
+
+                    </td>
             </tr>
         }
     </tbody>

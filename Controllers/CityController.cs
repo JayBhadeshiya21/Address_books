@@ -27,9 +27,30 @@ namespace Address_books.Controllers
             return View(table);
         }
 
-        public IActionResult Index()
+        public IActionResult CityDelete(int CityID)
         {
-            return View();
+            try
+            {
+                string connectionString = configuration.GetConnectionString("ConnectionString");
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    connection.Open();
+                    SqlCommand command = connection.CreateCommand();
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.CommandText = "PR_City_Delete";
+                    command.Parameters.Add("@ID", SqlDbType.Int).Value = CityID;
+
+                    command.ExecuteNonQuery();
+                }
+
+                TempData["SuccessMessage"] = "City deleted successfully.";
+                return RedirectToAction("CityList");
+            }
+            catch (Exception ex)
+            {
+                TempData["ErrorMessage"] = "An error occurred while deleting the city: " + ex.Message;
+                return RedirectToAction("CityList");
+            }
         }
     }
 }

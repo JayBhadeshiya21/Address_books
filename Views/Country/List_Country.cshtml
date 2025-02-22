@@ -2,6 +2,7 @@
 @using System.Data
 
 <main id="main" class="main">
+    <span class="text-danger">@TempData["ErrorMessage"]</span>
 
     <div class="container my-5">
         <h1 class="text-center mb-4">Countries</h1>
@@ -13,6 +14,7 @@
                     <th>CountryCode</th>
                     <th>CreationDate</th>
                     <th>Username</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -24,6 +26,11 @@
                         <td>@dataRow["CountryCode"]</td>
                         <td>@dataRow["CreationDate"]</td>
                         <td>@dataRow["UserName"]</td>
+                        <td>
+                            <a asp-controller="Country" asp-action="CountryIDDelete" asp-route-CountryID="@dataRow["CountryID"]" class="btn btn-outline-danger btn-xs">
+                                <i class="bi bi-x"></i>
+                            </a>
+                        </td>
                     </tr>
                 }
             </tbody>
